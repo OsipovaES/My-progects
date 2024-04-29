@@ -18,7 +18,7 @@
             text-underline-offset: 1rem;
             transition: all .3s ease-out;
         }
-        @include media-mobile {
+        @media (max-width: 731px) {
             @include font($size: 3.2rem, $height: 160%);
             &:active {
                 color: $color-light;
@@ -39,6 +39,7 @@
     }
     @media (max-width: 731px) {
         @include flex($flex-dir:column);
+        z-index: 1;
         top: 0;
         right: 0;
         position: absolute;
@@ -47,7 +48,7 @@
         background: $color-dark;
         list-style-type: none;
         transform: translateX(-250%);
-        height: 82.3rem;
+        height: 100vh;
         max-width: 32rem;
         width: 100%;
     }  

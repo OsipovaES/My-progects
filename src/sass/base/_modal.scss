@@ -1,0 +1,131 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:rgba(41,41,41, 0.7);
+
+    &__card {
+        @include flex($justify:space-between);
+        background-color: $color-card;
+        max-width: 90rem;
+        width: 90%;
+        max-height: 50rem;
+        height: 90%;
+        border-radius: 1rem;
+        position: relative;
+        gap: 1rem;
+        @include media-tablet {
+            justify-content: center;
+            max-width: 63rem;
+            max-height: 35rem;
+            height: 80%;
+            width: 80%;
+        }
+        @media (max-width: 400px) {
+            height: 75%;
+            width: 75%;
+        }
+    }
+
+    &__content{
+        @include flex($flex-dir: column, $i-align: flex-start);
+        max-width: 35rem;
+        gap: 1rem;
+        padding-right: 1rem;
+        @include media-tablet {
+            max-width: 26rem;
+            height: auto;
+            gap: 0;
+            padding-right: 1rem;
+        }
+        @media (max-width: 550px) {
+            @include flex($flex-dir: column);
+            padding-right: 0;
+            max-width: 22rem;
+            text-align: justify;
+        }
+    }
+
+    &__img {
+        max-width: 50rem;
+        max-height: 50rem;
+        width: 100%;
+        border-radius: 1rem;
+        @include media-tablet {
+            max-width: 35rem;
+            max-height: 35rem;
+        }
+        @media (max-width: 615px) {
+            display: none;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 3.5rem;
+        line-height: 130%;
+        font-weight: normal;
+    }   
+
+    &__breed {
+        margin: 0;
+        font-size: 2rem;
+        line-height: 115%;
+        font-weight: normal;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        line-height: 110%;
+        letter-spacing: 6%;
+        @include media-tablet {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        font-size: 1.5rem;
+        &::before {
+            color: $color-primary;
+            content: '•';
+        }
+    }
+
+    &__close-btn {
+        padding: 8px 12px;
+        border:  2px solid $color-primary;
+        border-radius: 100%;
+        background: none;
+        position: absolute;
+        bottom: 500px;
+        right: -40px;
+        cursor: pointer;
+        svg {
+            pointer-events: none;
+        }
+        @include media-tablet {
+            bottom: 350px
+        }
+    }
+}
+
+.modal--show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
