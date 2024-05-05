@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
     <title>Cozy House</title>
-<script defer src="../main.b3832e6fd389882296ee.js"></script></head>
+<script defer src="../main.4360aacbbbfcdceeb10a.js"></script></head>
 <body class="body">
 
     <section class="promo">
@@ -25,6 +25,7 @@
                         <li><a class="navigation__link" href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
+                <div class="overlay"></div>
             </header>
             <div class="promo__content">
                 <div class="promo__filling">
@@ -58,21 +59,22 @@
                 <div class="slider">
                     <button class="button button_circle button_left"></button>
                     <div class="slider__wrapper">
-                        <div class="card">
+                        <div class="card" data-name="Katrine" >
                             <img class="card__image" src="../assets/pets-katrine.png" alt="Cat Katrine">
                             <p class="card__name">Katrine</p>
-                            <button class="button button_empty">Learn more</button>
+                            <button class="card__button button button_empty">Learn more</button>
                         </div>
-                        <div class="card">
+                        <div class="card" data-name="Jennifer" >
                             <img class="card__image" src="../assets/pets-jennifer.png" alt="Puppy Jennifer">
                             <p class="card__name">Jennifer</p>
                             <button class="button button_empty">Learn more</button>
                         </div>
-                        <div class="card">
+                        <div class="card" data-name="Woody" >
                             <img class="card__image" src="../assets/pets-woody.png" alt="Dog Woody">
                             <p class="card__name">Woody</p>
                             <button class="button button_empty">Learn more</button>
                         </div>
+                        <div class="modal"></div>
                     </div>
                     <button type="button" class="button button_circle button_right"></button>
                 </div>
@@ -165,6 +167,5 @@
                 <img class="footer__image" src="../assets/footer-puppy.png" alt="Footer puppy">
             </div>
     </footer>
-
 </body>
 </html>
